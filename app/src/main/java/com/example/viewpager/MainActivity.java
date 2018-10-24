@@ -9,17 +9,21 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
     private View view1, view2, view3;
     private ViewPager viewPager;  //对应的viewPager
 
     private List<View> viewList;//view数组
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button = new Button(this);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         LayoutInflater inflater=getLayoutInflater();
